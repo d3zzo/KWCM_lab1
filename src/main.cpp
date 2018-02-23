@@ -1,14 +1,28 @@
 #include <cmath>
-#include "trygonometria.h"
+#include "LaborkaConfig.h"
+#ifdef USE_TRIGONOMETRY_DEGREE
+	#include "trygonometria.h"
+#endif
 #include <iostream>
 using namespace std;
 
 int main() 
 {
-	/*degreemath::sin(50); */
-	cout<<degreemath::sin(30)<< endl;
-	cout<<degreemath::cos(30)<< endl;
-	cout<<degreemath::tan(30)<< endl;
-	cout<<degreemath::ctg(30)<< endl;
+	double angle = 30;
+	double angleRadian = 0.8;
+	#ifdef USE_TRIGONOMETRY_DEGREE
+		cout<<degreemath::sin(angle)<< endl;
+		cout<<degreemath::cos(angle)<< endl;
+		cout<<degreemath::tan(angle)<< endl;
+		cout<<degreemath::ctg(angle)<< endl;
+	#else
+		cout<<sin(angleRadian)<< endl;
+		cout<<cos(angleRadian)<< endl;
+		cout<<tan(angleRadian)<< endl;
+		cout<<1/tan(angleRadian)<< endl;
+
+	#endif
+
+
 	/*...*/ return 0; 
 }\
