@@ -3,12 +3,13 @@
 #ifdef USE_TRIGONOMETRY_DEGREE
 	#include "trygonometria.h"
 #endif
+#include "trygonometria.h"
 #include <iostream>
 using namespace std;
 
 int main() 
 {
-	double angle = 30;
+	double angle = 45;
 	double angleRadian = 0.8;
 	#ifdef USE_TRIGONOMETRY_DEGREE
 		cout<<degreemath::sin(angle)<< endl;
@@ -23,6 +24,6 @@ int main()
 
 	#endif
 
-
+	cout<<degreemath::sin(angle)<< endl;
 	/*...*/ return 0; 
 }\
